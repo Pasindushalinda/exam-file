@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>City Cricket Club - Change Access Code</title>
+
+    <script>
+
+        /* Array that holds five access codes that have already been used
+           by the club member.
+           The first value in the array is the current access code */
+
+        var usedAccessArray = ["ABC123","GH45JK","LM78PQ","ZX56RT","UV90MN"]
+
+        function changeAccess(){
+
+            var currentCode =
+            document.getElementById("currentAccess").value
+            if(currentCode=""){
+                alert("Please enter the current access code")
+            }else if(currentCode[i]<usedAccessArray){
+
+            }
+
+            // Add your code here
+            var newCode=document.getElementById("newAccess").value
+            if(newCode=""){
+                alert("Please enter a new access code")
+            }else if(newCode.length!=6){
+                alert("The new code must have exactly 6 characters")
+            }
+            var confirmCode=document.getElementById("confirmAccess").value
+
+
+        } // End of changeAccess() function
+
+    </script>
+
+</head>
+
+<body>
+
+    <h2>Change Access Code</h2>
+
+    <form id="changeAccessForm">
+
+        <p>
+            <label for="currentAccess">
+                Current access code *:
+            </label>
+
+            <input type="text" id="currentAccess">
+        </p>
+
+        <p>Your new access code must be:</p>
+
+        <ul>
+            <li>exactly 6 characters</li>
+            <li>different from previous access codes</li>
+        </ul>
+
+        <p>
+            <label for="newAccess">
+                New access code *:
+            </label>
+
+            <input type="text" id="newAccess">
+        </p>
+
+        <p>
+            <label for="confirmAccess">
+                Confirm new access code *:
+            </label>
+
+            <input type="text" id="confirmAccess">
+        </p>
+
+        <p>
+            <input type="button"
+            onclick="changeAccess()"
+            value="Change Access Code">
+        </p>
+
+    </form>
+
+    <p id="savedMessage"></p>
+
+</body>
+</html>

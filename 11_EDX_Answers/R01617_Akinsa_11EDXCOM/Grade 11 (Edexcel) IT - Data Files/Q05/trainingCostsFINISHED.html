@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>City Cricket Club</title>
+
+    <style>
+        body{
+            font-family: Arial;
+        }
+    </style>
+
+    <script>
+
+        function hideInfo() {
+
+            document.getElementById(
+            "trainingInfo").style.display="none"
+
+        } // End of hideInfo() function
+
+
+        function displayDetails() {
+
+            // Add your code here
+
+            document.getElementById("trainingInfo").style.display="block"
+
+            var memberType=document.getElementById("memberType").value
+            if(memberType=="junior"){
+                document.getElementById("sessionFee").value="8.00";
+
+            }else{
+                document.getElementById("sessionFee").value="15.00";
+            }
+
+
+
+
+
+
+        } // End of displayDetails() function
+
+
+        function registerPlayer(){
+
+            // Add your code here
+
+
+
+
+
+
+
+
+
+
+        } // End of registerPlayer() function
+
+
+    </script>
+
+</head>
+
+<body onload="hideInfo()">
+
+<label for="memberType">
+Select membership type:
+</label>
+
+<select id="memberType"
+name="memberType"
+onchange="displayDetails()">
+
+    <option></option>
+
+    <option value="junior">
+        Junior Member
+    </option>
+
+    <option value="senior">
+        Senior Member
+    </option>
+
+</select>
+
+<br>
+
+<div id ="trainingInfo">
+
+    <h3 id ="costs">
+        Training Costs
+    </h3>
+
+    <p id="sessionFee">
+    <!-- Add code for the button here -->
+        Session fee per player-
+    </p>
+
+
+</div>
+
+</body>
+</html>

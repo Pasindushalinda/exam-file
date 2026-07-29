@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+
+    <script>
+        function setUpPage(){
+            document.body.style.backgroundColor = "lightblue";
+
+            document.getElementById("pause").style.display = "none";
+
+            document.getElementById("musicPlayer").style.width = "300px";
+
+            document.getElementById("caption").style.display = "none";
+        }
+
+        function playMusic(){
+           // add your code here
+            document.body.style.backgroundColor="darkblue";
+            document.getElementById("pause").style.display = "block";
+
+            document.getElementById("musicPlayer").style.width = "600px";
+
+            document.getElementById("caption").style.display = "block";
+
+
+
+        }
+
+        function resetPage(){
+            document.body.style.backgroundColor = "lightblue";
+
+            document.getElementById("pause").style.display = "none";
+
+            document.getElementById("musicPlayer").style.width = "300px";
+
+            document.getElementById("caption").style.display = "none";
+        }
+    </script>
+</head>
+
+<body onload="setUpPage()">
+
+    <img id="pause" src="pause.png" onclick="resetPage()">
+
+    <h1>My Music Player</h1>
+
+    <p id="caption">Now Playing Your Favourite Songs</p>
+
+    <p>
+        <img id="musicPlayer" src="music.jpg" alt="Music Player" onclick="playMusic()">
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q03c</title>
+
+    <script>
+        function displaySelection() {
+
+            var radioButtons = document.getElementsByName("ticketType");
+
+            for (var i = 0; i < radioButtons.length; i++) {
+
+                if (radioButtons[i].checked) {
+
+                    var ticketType = radioButtons[i].value;
+
+                    var message = "You have selected a " + ticketType + " ticket for the football match.";
+
+                    document.getElementById("message").innerHTML = message;
+
+                } // End of if statement
+
+            } // End of for loop
+
+        } // End of function
+    </script>
+
+</head>
+
+<body>
+
+    <h3>Select your football ticket type</h3>
+
+    <form>
+        <input type="radio" name="ticketType" value="Standard" onclick="displaySelection()">Standard
+        <input type="radio" name="ticketType" value="VIP" onclick="displaySelection()">VIP
+        <input type="radio" name="ticketType" value="Student" onclick="displaySelection()">Student
+    </form>
+
+    <p id="message"></p>
+
+</body>
+</html>
