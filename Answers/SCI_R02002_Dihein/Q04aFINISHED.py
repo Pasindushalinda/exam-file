@@ -1,0 +1,63 @@
+# Q04a-------------------------------------------------------------------
+# Import libraries
+# -------------------------------------------------------------------
+import math
+
+# -------------------------------------------------------------------
+# Constants
+# -------------------------------------------------------------------
+
+
+JUICE_ADULT = 0.8  # Bottle 
+JUICE_CHILD = 0.5  # Bottle
+
+SANDWICH_ADULT = 2  # Number 
+SANDWICH_CHILD = 1  # Number
+
+FRUIT_ADULT = 75    # Grams
+FRUIT_CHILD = 50    # Grams
+
+SANDWICH_PACK = 20 
+FRUIT_PACK = 1000
+
+
+# -------------------------------------------------------------------
+# Global variables
+# -------------------------------------------------------------------
+
+# =====> Write your code here
+totalJuice = 0
+totalSandwich = 0
+totalFruit = 0
+
+# -------------------------------------------------------------------
+# Main program
+# -------------------------------------------------------------------
+
+# =====> Write your code here
+numAdults = int(input("Enter the number of adults attending:"))
+numChild = int(input("Enter the number of children attending:"))
+
+numJuiceAdult = JUICE_ADULT * numAdults
+numJuiceChild = JUICE_CHILD * numChild
+totalJuice = int(numJuiceAdult + numJuiceChild) // 1
+
+
+numSandwichAdult = SANDWICH_ADULT * numAdults
+numSandwichChild = SANDWICH_CHILD * numChild
+totalSandwich = numSandwichAdult + numSandwichChild
+
+
+numFruitAdult = FRUIT_ADULT * numAdults
+numFruitChild = FRUIT_CHILD * numChild
+totalFruit = int((numFruitAdult + numFruitChild) / FRUIT_PACK) // 1
+
+if totalFruit == 0:
+    totalFruit = totalFruit + 1
+
+
+print("-----The Required Quantities-----")
+print("Juice bottles:",totalJuice)
+print("Sandwich packs:",totalSandwich)
+print("Fruit packs:",totalFruit)
+print("----------------------------------")
